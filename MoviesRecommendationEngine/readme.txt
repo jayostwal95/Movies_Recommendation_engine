@@ -1,0 +1,16 @@
+INTRODUCTION:
+Movie Recommendation is the system that explores the data to predict or refines the preferences according to the purchaser’s choice. Such a recommender system is adapted in a variety of different spaces including music, news, books, movies, social tags, research articles, and search queries.
+DATASET:
+Prediction of films whether it be a blockbuster success or flop depends on many factors. Movies with a higher production budget can also result in the flop or vice versa. There are many different factors on which the film will be a commercial success depends such as cast, directors, crew, genre, etc. From this dataset, we can dig out every single detail of several thousand films and predict the results.
+This dataset was originally generated from the movie database API.
+There are all 2 datasets for this project:
+1. Credit dataset got 4 columns: ‘movie id’, ‘title’, ‘cast’ and ‘crew’ 2. Movie data got 20 columns: budget', 'genres', 'homepage', 'id', 'keywords', 'original language', 'original title', 'overview', 'popularity', 'production companies', 'production countries', 'release date', 'revenue', 'runtime', 'spoken languages', 'status', 'tagline', 'title', 'vote average', 'vote count'.
+Technologies used:
+Our Project “Movies Recommendation Engine” is based on the user’s preference and choices. Based on that, it recommends the movies to the users. We have implemented tfid vectorization and the cosine similarity matrix. We have executed the project on jupyter notebook with the use of python language.
+IMPLEMENTATION:
+Here we had implemented tf-IDF (term frequency-inverse document frequency) in our project. It is a numerical sum which shows the consequence of a word to a document in a collection of the given dataset. It helps to identify which word appears more frequently in the given text document. It is widely used for the stop words (words which are clean out before or after processing of natural language data) function in cleaning the subject fields including classification and text summarization.
+In this project, we had used ‘English’ as our stop word for the tfid vectorization for the data ‘overview’ from the given data.
+Scikit learns already built in ‘TfIdVectorizer’ which gives the tf-idf matrix in a couple of lines. Considering the given matrix, we had computed the similarity score. To compute the score, there are different methods such as Pearson, Euclidean, Cosine similarity. Here in the project, we had selected the cosine similarity to determine a numeric quantity that determines the similarity between the two movies. Mathematically, the cosine function is given by:
+Here the dot product will give the cosine similarity score as we had used the tf-idf vectorizer. To work it faster we had used the sklearn’s linear_kernel ().
+So here my input will be the movie title, and the output will give the list of 10 most similar movies. To get it done we had done the reverse mapping of data frame indices and movie titles.
+From the output, we can see that the ten movies which machine recommended are mostly the Batman movies.
